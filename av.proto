@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service AVService {
+  rpc GetStream (StreamReq) returns (StreamResp);
+}
+
+message StreamReq {
+  string device_id = 1;
+}
+
+message StreamResp {
+  float latency_ms = 1;
+  string status = 2;
+}
+
+
